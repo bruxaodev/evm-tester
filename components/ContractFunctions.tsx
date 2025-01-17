@@ -49,7 +49,7 @@ export default function ContractFunctions({ abi, contractAddress, account }: Con
       console.log({ result })
 
       const iface = new ethers.utils.Interface(abi);
-      let formattedResult;
+      let formattedResult: any;
       try {
         formattedResult = iface.decodeFunctionResult(functionName, result);
       } catch (decodeError) {
